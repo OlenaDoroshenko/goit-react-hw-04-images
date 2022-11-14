@@ -22,6 +22,7 @@ const App = () => {
       .then(pictures => {
         if (pictures.length === 0) {
           setError('Nothing found =(');
+          setIsLoading(false);
           return;
         }
         setPictures(p => [...p, ...pictures]);
